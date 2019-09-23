@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cabin', sans-serif;
+}
+a:link , a:visited{
+    color: white;
+    text-decoration: none;
+}
+body {
+    background-image: url("/img/BackgroundS.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.gridmain {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+            "explain main highscore"
+            "footer footer footer";
+    min-height: 95vh;
+}
+.ghostdoor-start-mainstart, .ghostdoor-start-highscore, .ghostdoor-start-explain {
+    text-align: center;
+    margin-top: 5%;
+}
+.ghostdoor-start-explain {
+    margin-top: 20%;
+    grid-area: explain;
+}
+.ghostdoor-start-explain-story{
+    font-size: 25px;
+    text-align: left;
+    width: 80%;
+    padding: 50px;
+}
+.ghostdoor-start-highscore {
+    grid-area: highscore;
+    margin-top: 20%;
+    text-align: center;
+}
+.ghostdoor-start-highscore-table {
+    margin-top: 7%;
+    font-size: 25px;
+    display: inline-block;
+}
+table, td, th {
+  text-align: left;
+}
+
+.ghostdoor-start-highscore-table table {
+  border-collapse: collapse;
+  width: 400px;
+}
+
+th, td {
+  padding: 10px;
+}
+.ghostdoor-start-mainstart {
+    grid-area: main;
+    margin-top: 30%;
+}
+.ghostdoor-start-mainstart-title {
+    margin-bottom: 15%;
+    font-size: 30px;
+}
+#kingboo {
+    width: 400px;
+}
+.ghostdoor-start-mainstart-startbtn a{
+    padding-top: 10px;
+    padding-right: 200px;
+    padding-left: 200px;
+    padding-bottom: 10px;
+    background-color: #303030;
+    color: white;
+    font-size: 30px;
+    border-radius: 2px;
+    box-shadow: 0px 0px 4px 3px rgba(0,0,0,0.5);
+    transition: 0.2s;
+}
+.ghostdoor-start-mainstart-startbtn a:hover {
+    background-color: #454545;
+}
+.ghostdoor-start-mainstart-startbtn {
+    width: 100%;
+    display: inline-block;
+    margin-top: 25%;
+}
+
+.ghostdoor-start-mainstart-img {
+    display: inline-block;
+}
+.footer {
+    border-top: 1px solid black;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    grid-area: footer;
+}
+.footer a:link, .footer a:visited {
+    color: black;
+}
+/*
+
+Game over
+
+*/
+.ghostdoor-gameover-text img{
+    margin-top: 10%;
+}
+.ghostdoor-gameover{
+    min-height: 100vh;
+    font-size: 20px;
+}
+.ghostdoor-gameover .gameover-user input {
+    border-style: none;
+    padding: 5px;
+    font-size: 20px;
+    width: 30%;
+    background-color: transparent;
+    border-bottom: 3px solid black;
+    margin-bottom: 20px;
+}
+.ghostdoor-gameover .ghostdoor-gameover-btn input {
+    border-style: none;
+    padding-top: 10px;
+    padding-right: 200px;
+    padding-left: 200px;
+    padding-bottom: 10px;
+    background-color: #303030;
+    color: white;
+    font-size: 20px;
+    border-radius: 0;
+    box-shadow: 0px 0px 4px 3px rgba(0,0,0,0.5);
+    transition: 0.2s;
+}
+
+/*
+
+In Game
+
+ */
+.ghostdoor-game {
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+}
+.ghostdoor-game-main {
+    display: inline-block;
+    margin-top: 8%;
+}
+.ghostdoor-game-doors button{
+    height: 30%;
+    width: 200px;
+    margin: 10px;
+    overflow: hidden;
+    border-style: none;
+    background-color: transparent;
+    transition: 0.2s;
+}
+.ghostdoor-game-doors button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+.ghostdoor-game-doors img {
+    height: 100%;
+    width: 100%;
+}
+.ghostdoor-game-reset input{
+    padding-top: 10px;
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-bottom: 10px;
+    background-color: #303030;
+    color: white;
+    font-size: 20px;
+    border-radius: 2px;
+    box-shadow: 0px 0px 4px 3px rgba(0,0,0,0.5);
+    transition: 0.2s;
+    border: none;
+    margin-top: 10%;
+}
+.ghostdoor-game-reset input:hover {
+    background-color: #454545;
+}
+.level-size {
+    font-size: 35px;
+    margin-bottom: 8%;
+    text-decoration: underline;
+}
+.nav {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    background-color: #3b3b3b;
+    color: white;
+}
+.nav div {
+    display: inline-block;
+}
+.nav img {
+    padding-top: 5px;
+}
+nav h1{
+    font-size: 55px;
+    padding-bottom: 5px;
+}
+.kingbooicon {
+    width: 50px;
+}
+@media (max-width: 1250px) {
+    .ghostdoor-start-explain {
+        margin-top: 30%;
+    }
+    .ghostdoor-start-highscore {
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+    .ghostdoor-start-mainstart {
+        margin-top: 15%;
+    }
+    .ghostdoor-start-mainstart-startbtn {
+        margin-top: 5%;
+    }
+    .gridmain {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+                "main"
+                "explain"
+                "highscore"
+                "footer";
+    }
+}
+@media (max-width: 800px) {
+    .ghostdoor-start-mainstart-startbtn a {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    #kingboo {
+        width:250px;
+    }
+}
+@media (max-width: 500px) {
+    .nav h1{
+        font-size: 40px !important;
+    }
+    .kingbooicon {
+        width: 30px;
+    }
+}
+@media (max-width: 400px) {
+    .ghostdoor-start-highscore-table, table{
+        width: 100%
+        display: block;
+        overflow:hidden;
+        
+    }
+    .level-size {
+        margin-top:15%;
+    }
+    .ghostdoor-game-doors button{
+        width: 150px;
+    }
+}
